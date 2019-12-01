@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Projects Search</title>
+        <meta name="description" content="Search for projects in your area">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                
+        <!-- Normalize styles -->
+        <link rel="stylesheet" href="normalize.css">
+    
+        <!-- Styles -->
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="header--sticky">
+            <nav>
+                <div class="left-arrow-icon">
+                    <button class="icon-button">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="close-button">
+                    <button class="icon-button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </nav>
+         </header>
+         <main class="projects-search">
+            <form action="" class="search-form">
+                <h1 class="search-form__title">Find a classroom to support</h1>
+                <div class="search-form__container">
+                    <div class="search-form__input">
+                        <label for="search">
+                            <span class="search-form__label">City, State, or Zip </span>
+                        </label>
+                        <input type="text" id="search" name="search">
+                    </div>
+                    <div class="search-form__submit">
+                        <button type="submit" class="contained-button--large">Search</button>
+                    </div>
+                </div>
+            </form>
+         </main>
+    </body>
+</html>

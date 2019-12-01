@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Overview - Roundups</title>
+        <meta name="description" content="Link your bank account">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                
+        <!-- Normalize styles -->
+        <link rel="stylesheet" href="normalize.css">
+    
+        <!-- Styles -->
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="header--sticky header--overview">
+            <nav>
+                <div class="hamburger-icon--home">
+                    <button class="icon-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <div class="menu-container--overview">
+                    <ul class="menu-list">
+                        <li>
+                            <button class="text-button--small">Settings</button>
+                        </li>
+                        <li>
+                            <button class="contained-button--small">Log out</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="overview">
+            <section class="wallet__container">
+                <p class="wallet__title">Your total balance</p>
+                <h1 class="wallet__balance">$30.00</h1>
+                <p class="wallet__subtitle">+ $0.45 today</p>
+                <button class="give-button contained-button--small">Give</button>
+            </section>
+            <section class="tabs">
+                <button class="overview__tab active">Round ups</button>
+                <button class="overview__tab">Donations</button>
+            </section>
+            <section class="roundups__tab-container">
+                <div class="roundups__toggle-container">
+                    <label for="roundups-toggle" class="toggle">
+                        <span class="roundups-toggle__title">Turn on automatic round ups</span>
+                        <input type="checkbox" id="roundups-toggle" name="roundups-toggle" required>
+                        <span class="slider--round"></span>
+                    </label>
+                </div>
+                <div class="roundups__list">
+                    <h2>October 1, 2019</h2>
+                    <ul class="transactions-list">
+                        <li>
+                            <div class="transactions__container">
+                                <p class="transactions__item-name">Starbucks</p>
+                                <p class="transactions__item-subtitle">$24.89</p>
+                            </div>
+                            <label for="transactions-1" class="transactions-toggle">
+                                <span class="transactions-toggle__title">$0.11</span>
+                                <input type="checkbox" id="transactions-1" name="transactions-1" required>
+                                <span class="circle"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div class="transactions__container">
+                                <p class="transactions__item-name">Ritual</p>
+                                <p class="transactions__item-subtitle">$36.11</p>
+                            </div>
+                            <label for="transactions-2" class="transactions-toggle">
+                                <span class="transactions-toggle__title">$0.89</span>
+                                <input type="checkbox" id="transactions-2" name="transactions-2" required>
+                                <span class="circle"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div class="transactions__container">
+                                <p class="transactions__item-name">Netflix</p>
+                                <p class="transactions__item-subtitle">$5.60</p>
+                            </div>
+                            <label for="transactions-3" class="transactions-toggle">
+                                <span class="transactions-toggle__title">$0.40</span>
+                                <input type="checkbox" id="transactions-3" name="transactions-3" required>
+                                <span class="circle"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div class="transactions__container">
+                                <p class="transactions__item-name">Clipper</p>
+                                <p class="transactions__item-subtitle">1234</p>
+                            </div>
+                            <label for="transactions-4" class="transactions-toggle">
+                                <span class="transactions-toggle__title">$0.40</span>
+                                <input type="checkbox" id="transactions-4" name="transactions-4" required>
+                                <span class="circle"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div class="transactions__container">
+                                <p class="transactions__item-name">PGANDE WEB ONLINE</p>
+                                <p class="transactions__item-subtitle">1234</p>
+                            </div>
+                            <label for="transactions-5" class="transactions-toggle">
+                                <span class="transactions-toggle__title">$0.40</span>
+                                <input type="checkbox" id="transactions-5" name="transactions-5" required>
+                                <span class="circle"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+         </main>
+    </body>
+</html>

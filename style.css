@@ -1,0 +1,1013 @@
+/* GLOBAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    flex: 2;
+}
+
+.header--sticky {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon-button {
+    border: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 0px;
+    height: 48px;
+}
+
+.icon-button--map,
+.icon-button--list {
+    border: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0px 0px;
+    height: 20px;
+    width: 20px;
+    margin-left: auto;
+}
+
+.contained-button--large {
+    border: 0px;
+    padding: 15px 45px;
+    background-color: rgba(0, 0, 0, 12%);
+    cursor: pointer;
+    width: 100%;
+}
+
+.contained-button--small {
+    border: 0px;
+    padding: 15px 45px;
+    background-color: rgba(0, 0, 0, 12%);
+    cursor: pointer;
+}
+
+.text-button--small {
+    border: 0px;
+    padding: 15px 45px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.text-button--xsmall {
+    border: 0px;
+    padding: 15px 0px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.text-link, .text-link:visited {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 38%);
+}
+
+.hamburger-icon--home,
+.menu-container--home, 
+.close-icon,
+.skip-button, 
+.close-button,
+.menu-container--overview {
+    float: right;
+}
+
+.left-arrow-icon,
+.close-icon,
+.skip-button {
+    display: inline-block;
+}
+
+.banks-list,
+.accounts-list,
+.transactions-list,
+.donations-list,
+.results-list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.transactions-list,
+.donations-list,
+.results-list {
+    width: 100%;
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banks-list button,
+.accounts-list button {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.register,
+.setup, 
+.login, 
+.confirmation,
+.projects-search {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-results,
+.project-detail {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.register-form,
+.setup-form,
+.login-form {
+    padding-top: 130px;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register-form__container,
+.setup-form__container,
+.login-form__container,
+.confirmation__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.register-form__input,
+.setup-form__input,
+.login-form__input,
+.search-form__input {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+}
+
+.register-form__input input,
+.setup-form__input input,
+.login-form__input input,
+.search-form__input input,
+.results-form__input,
+.donate-form__input input {
+    padding: 16px 22px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid black;
+    background-color: rgba(0, 0, 0, 12%);
+}
+
+.register-form__input label,
+.setup-form__input label,
+.login-form__input label,
+.search-form__input label {
+    padding-bottom: 10px;
+}
+
+.register-form__label,
+.setup-form__label,
+.login-form__label,
+.search-form__label {
+    color: rgba(0, 0, 0, 38%);
+    font-size: 16px;
+}
+
+.register-form__submit,
+.setup-form__submit,
+.login-form__submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 20%;
+}
+
+.roundups__list,
+.donations__list,
+.results__list,
+.reuslts__map {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transactions-list li,
+.donations-list li,
+.results-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 18px 13px;
+    margin: 10px 0px;
+    min-height: 75px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 20%);
+}
+
+.donations-list li,
+.results-list li {
+    align-items: flex-start;
+}
+
+.donations__container,
+.results__container {
+    flex: 2;
+}
+
+/* TEXT STYLES */
+
+/* H1 - 40px / 48px */
+.hero__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0px 0px 22px 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+/* H2 - 22px / 35px */
+.hero__body {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    margin: 0px 0px 40px 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+/* H3 - 30px / 40px */
+.secondary__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.secondary__title {
+    margin: 0px 0px 22px 0px;
+}
+
+/* H4 - 26px / 32px */
+
+.register-form__title,
+.setup-form__title,
+.login-form__title,
+.confirmation__title,
+.search-form__title,
+.project__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.setup-form__title,
+.search-form__title {
+    margin-bottom: 20px;
+}
+
+.confirmation__title {
+    margin-bottom: 42px;
+}
+
+.search-form__title {
+    width: 200px;
+}
+
+.project__title {
+    margin-top: 25px;
+}
+
+/* H5 - 20px / 24px */
+.wallet__title,
+.transactions-toggle__title,
+.donations__project-name,
+.results__project-name {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.transactions-toggle__title {
+    margin-right: 50px;
+}
+
+.donations__project-name {
+    padding: 0px 0px 7px 0px;
+}
+
+.results__project-name {
+    padding: 0px 0px 16px 0px;
+}
+
+/* BODY 1 - 20px / 32px */
+
+.secondary__body {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* BODY 2 - 16 px / 22px */
+
+.register-form__secondary p, 
+.login-form__secondary p, 
+.setup-form__description, 
+.banks-list__item-name, 
+.accounts-list__item-name,
+.confirmation__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.confirmation__description {
+    margin-bottom: 75px;
+}
+
+/* SUBTITLE 1 - 16 px / 22px */
+.accounts-list__item-subtitle,
+.wallet__subtitle,
+.transactions__item-subtitle,
+.donations__project-subtitle,
+.results__project-subtitle,
+.project__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0px;
+    margin: 0px;
+    color: rgba(0, 0, 0, 60%);
+}
+
+.results__project-subtitle {
+    padding-bottom: 16px;
+}
+
+.donations__project-amount {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 9px 0px 0px 0px;
+    padding: 3px 9px;
+    color: black;
+    background-color: #cdcdcd;
+    border-radius: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.donations__project-amount i {
+    margin: 0px 6px;
+}
+
+/* SUBTITLE 2 - 14 px / 19px */
+.roundups-toggle__title,
+.roundups__list h2,
+.donations__list h2,
+.donations__notification-title,
+.search-form__sub-title,
+.project__teacher-name,
+.project__age-group,
+.project__school-name,
+.project__city {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+}
+
+.project__teacher-name {
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.roundups__list h2,
+.donations__list h2 {
+    padding: 0px 24px 20px 24px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* OVERLINE - 14 px / 19px */
+.transactions__item-name,
+.donations__date,
+.results__amount,
+.funding-balance,
+.funding-goal {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+}
+
+.funding-goal {
+    margin-left: auto;
+}
+
+/* LANDING PAGE */
+
+.landing-page section {
+    padding-right: 36px;
+    padding-left: 36px;
+}
+
+.section--dark {
+    background-color: #d8d8d8;
+}
+
+.text-container {
+    max-width: 450px;
+}
+
+.hero {
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero > .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secondary {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__image {
+    margin: 40px 0px 0px 0px;
+}
+
+.hero__image, .secondary__image {
+    width: 295px;
+    height: 360px;
+}
+
+.secondary__image {
+    margin: 40px 0px 0px 0px;
+}
+
+.secondary > .text-container.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.secondary > .text-container.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    height: 150px;
+    background-color: #d8d8d8;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo--image {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    border-radius: 50px;
+}
+
+.logo--text {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-container--home,
+.menu-container--overview {
+    display: none;
+}
+
+.menu-list,
+.contact-list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-list li {
+    padding: 0px 15px;
+}
+
+/* OVERVIEW PAGE */
+
+.header--overview {
+    background-color: transparent;
+}
+
+.overview {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.roundups__tab-container, 
+.donations__tab-container {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    margin: 0px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wallet__container {
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #d8d8d8;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.wallet__balance {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 48px;
+    margin: 15px 0px 5px 0px;
+    padding: 0px;
+}
+
+.give-button {
+    margin: 36px 0px;
+    padding: 17px 70px;
+}
+
+.tabs {
+    background-color: #d8d8d8;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: row;
+    height: 12vh;
+}
+
+.overview__tab {
+    border: 0px;
+    background-color: transparent;
+    width: 50%;
+    height: 100%;
+    padding: 15px 0px;
+    font-size: 14px;
+}
+
+.active {
+    border-bottom: 1px solid black;
+}
+
+.roundups__toggle-container,
+.donations__notification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 0px;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    left: -15px;
+}
+
+.toggle input {
+    margin-left: 16px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider--round {
+    position: absolute;
+    cursor: pointer;
+    width: 35px;
+    height: 14px;
+    top: 5px;
+    right: -35px;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 34px;
+}
+
+.slider--round:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    bottom: -2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 21%);
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 50%;
+}
+
+.toggle input:checked + .slider--round {
+    background-color: rgba(0, 0, 0, 60%);
+}
+  
+.toggle input:focus + .slider--round {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+.toggle input:checked + .slider--round:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.transactions-toggle {
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.transactions-toggle input {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 40px;
+    height: 40px;
+}
+
+span.circle {
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+.transactions-toggle input + span.circle::before {
+	content: "+";
+    height: 40px;
+    width: 40px;
+    font-weight: 300;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 50%);
+    position: absolute;
+    top: 4px;
+    left: 10px;
+}
+
+.transactions-toggle input + span.circle::after {
+    border: 1px solid rgba(0, 0, 0, 12%);
+    border-radius: 50%;
+	content: "";
+    height: 40px;
+    width: 40px;
+	position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.transactions-toggle input:checked + span.circle::before {
+	content: "";
+    border: 2px solid;
+    border-radius: 0px;
+    border-left: 0;
+    border-top: 0;
+    height: 15px;
+    width: 7px;
+    transform: rotate(45deg);
+    color: rgba(0, 0, 0, 50%);
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.transactions-toggle input:checked + span.circle::after {
+    border: 0;
+    background-color: rgba(0, 0, 0, 12%);;
+    border-radius: 50%;
+	content: "";
+    height: 40px;
+    width: 40px;
+	position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.donations__project-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex: 1;
+}
+
+.donations__project-image img {
+    border-radius: 4px;
+}
+
+/* LINK BANK & SELECT ACCOUNT PAGE */
+
+.banks-list img {
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+.banks-list__item-name {
+    margin-left: 10px;
+}
+
+.banks-list .select,
+.accounts-list .select {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.setup-form__description {
+    padding: 0px 0px 15px 0px;  
+}
+
+.setup-form__container {
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+
+.setup-form__list {
+    height: 100%;
+    overflow: scroll;
+}
+
+.item-name__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+/* PROJECTS SEARCH & RESULTS PAGE */
+
+.search-form {
+    padding-top: 90px;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search-form__container,
+.search-form__container--results {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.search-form__container {
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+
+.search-form--results {
+    padding-top: 90px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search-form__submit {
+    display: flex;
+    flex-direction: column;
+    padding-top: 34px;
+}
+
+.results-list__container,
+.results-map__container {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    overflow: scroll;
+    margin: 0px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results-form__input {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0px 0px 0px;
+}
+
+.results-form__input input {
+    background-color: #e0e0e0;
+    border: 0px;
+}
+
+.search-form__sub-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0px;
+}
+
+/* PROJECT DETAIL PAGE */
+
+.project-about {
+    padding-top: 90px;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 100%;
+    max-width: 600px;
+    height: calc(100vh - 239px);
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.project-cta {
+    position: absolute;
+    bottom: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    width: 100%;
+    max-width: 600px;
+    height: 239px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.slider {
+    width: 100%;
+    height: 5px;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    border-radius: 1px;
+    background: #d3d3d3;
+    margin: 15px 0px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #414141;
+    height: 12px;
+    width: 12px;
+    border-radius: 50px;
+}
+
+.donate-form__input {
+    display: flex;
+    flex-direction: column;
+    margin: 22px 0px 15px 0px;
+}
+
+.donate-form__input input {
+    text-align: center;
+}
+
+.project__teacher-info-container {
+    margin: 0px 0px 22px 0px;
+}
+
+.slide-caption-container {
+    display: flex;
+    flex-direction: row;
+    margin: 28px 0px 0px 0px;
+}
+
+/* CONFIRMATION PAGE */
+
+.confirmation__container {
+    text-align: center;
+    padding: 32px;
+    max-width: 450px;
+}
+
+.confirmation__icon {
+    color: rgba(0, 0, 0, 12%);
+    font-size: 100px;
+    margin-bottom: 50px;
+}
+
+/* REGISTER & LOGIN */
+
+.register-form__secondary,
+.login-form__secondary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+@media screen and (min-width: 600px) {
+    .hamburger-icon--home {
+        display: none;
+    }
+
+    .menu-container--home, .menu-container--overview {
+        display: block;
+    }
+}

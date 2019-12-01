@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Projects Detail</title>
+        <meta name="description" content="Search for projects in your area">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                
+        <!-- Normalize styles -->
+        <link rel="stylesheet" href="normalize.css">
+    
+        <!-- Styles -->
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="header--sticky">
+            <nav>
+                <div class="left-arrow-icon">
+                    <button class="icon-button">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="close-button">
+                    <button class="icon-button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </nav>
+         </header>
+         <main class="project-detail">
+            <section class="project-about">
+                <div class="project__image">
+                    <img src="https://dummyimage.com/328x184/cccccc/909090.png&text=placeholder" alt="">
+                </div>
+                <h1 class="project__title">Help Expand Our SEL and Environment Library</h1>
+                <div class="project__teacher-info-container">
+                    <p class="project__teacher-name">Ms. Stillford</p>
+                    <p class="project__age-group">Grades 3-5</p>
+                    <p class="project__school-name">King Elementary School</p>
+                    <p class="project__city">Richmond, CA</p>
+                </div>
+                <p class="project__description">Help me give my students new books that focus on social justice, multicultural titles, the environment and climate change, and activism. Help me give my students new books that focus on social justice, multicultural titles, the environment and climate change, and activism.</p>
+            </section>
+            <section class="project-cta">
+                <div class="slide-container">
+                    <div class="slide-caption-container">
+                        <p class="funding-balance">$312 still needed</p>
+                        <p class="funding-goal">$412 goal</p>
+                    </div>
+                    <input type="range" min="1" max="412" value="100" class="slider" disabled="disabled">
+                </div>
+                <form action="" class="donate-form">
+                    <div class="donate-form__container">
+                        <div class="donate-form__input">
+                            <input type="text" id="donate-amount" name="amount" value="$30.00">
+                        </div>
+                        <div class="donate-form__submit">
+                            <button type="submit" class="contained-button--large">Give</button>
+                         </div>
+                    </div>
+                </form>
+            </section>
+         </main>
+    </body>
+</html>
